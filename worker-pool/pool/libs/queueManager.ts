@@ -31,13 +31,14 @@ class QueueManager {
   async createJob<T>(
     queueName: JobType,
     workData: T
-  ): Promise<{ job: Job<T>; result: any }> {
+  ): Promise<{ job: Job<T> }> {
     return new Promise((resolve, reject) => {
       const queue = this.get(queueName);
       const job = queue.createJob<T>(workData);
-      job.on("failed", (error) => reject(error));
-      job.on("succeeded", (result) => resolve({ job, result }));
-      job.save();
+      job
+        .save()
+        .then((job) => resolve({ job }))
+        .catch((error) => reject(error));
     });
   }
 }
