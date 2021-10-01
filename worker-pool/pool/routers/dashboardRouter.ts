@@ -1,7 +1,7 @@
 import Arena from "bull-arena";
 
 import Bee from "bee-queue";
-import { JobType } from "../common/constants";
+import { JobType } from "../../common/constants";
 
 const host: string = process.env.REDIS_HOST || "127.0.0.1";
 const port: number = parseInt(process.env.REDIS_PORT, 10) || 6379;

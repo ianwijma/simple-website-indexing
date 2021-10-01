@@ -1,6 +1,6 @@
-import Application from "../common/application";
-import ApiRouter from "./routers/apiRouter";
+import Application from "../../common/application";
 import DashboardRouter from "./routers/dashboardRouter";
+import ApiRouter from "./routers/apiRouter";
 
 export default class Pool {
   app: Application;
