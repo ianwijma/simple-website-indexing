@@ -1,0 +1,25 @@
+{
+  "name": "simple-website-indexing",
+  "version": "1.0.0",
+  "repository": "https://github.com/ianwijma/simple-website-indexing.git",
+  "author": "Ian Wijma <ian@wij.ma>",
+  "dependencies": {
+    "bee-queue": "^1.4.0",
+    "bull-arena": "^3.29.3",
+    "express": "^4.17.1",
+    "mongoose": "^6.0.8",
+    "puppeteer": "^10.4.0",
+    "redis": "^3.1.2"
+  },
+  "scripts": {
+    "start:pool": "WORKER_TYPE=pool ts-code ./worker-pool/index.ts",
+    "start:worker": "WORKER_TYPE=worker ts-code ./worker-pool/index.ts"
+  },
+  "devDependencies": {
+    "@types/bull-arena": "^3.0.4",
+    "@types/express": "^4.17.13",
+    "@types/redis": "^2.8.32",
+    "ts-node": "^10.2.1",
+    "typescript": "^4.4.3"
+  }
+}

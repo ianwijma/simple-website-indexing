@@ -1,0 +1,7 @@
+export enum JobType {
+  ENQUEUE_URL,
+  FETCH_PAGE,
+  EXTRACT_META,
+  EXTRACT_PREVIEW,
+  EXTRACT_SEARCH,
+}
